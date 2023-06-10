@@ -19,8 +19,15 @@ window.scroll = () =>{
         document.querySelector('.header').classList.add('active');
     }else{
         document.querySelector('.header').classList.remove('active');
-
     }
+
+    window.onload = () =>{
+        if(window.scrollY > 0){
+            document.querySelector('.header').classList.add('active');
+        }else{
+            document.querySelector('.header').classList.remove('active');
+        }
+    } 
 }
 
 
@@ -36,5 +43,30 @@ var swiper = new Swiper(".home-slider", {
     autoplay: {
         delay: 9500,
         disableOnInteraction: false,
+      },
+  });
+
+
+//   for feature section
+var swiper = new Swiper(".feature-slider", {
+    spaceBetween: 30,
+    grabcuror: true,
+    loop:true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 9500,
+        disableOnInteraction: false,
+      },
+
+      breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+        },
       },
   });

@@ -11,7 +11,7 @@ menu.onclick = () =>{
 
 // for window wcroll
 
-window.scroll = () =>{
+window.onscroll = () =>{
     menu.classList.remove('fa-times')
     navbar.classList.remove('active')
 
@@ -20,15 +20,16 @@ window.scroll = () =>{
     }else{
         document.querySelector('.header').classList.remove('active');
     }
+}
 
-    window.onload = () =>{
-        if(window.scrollY > 0){
-            document.querySelector('.header').classList.add('active');
+
+window.onload = () =>{
+    if(window.scrollY > 0){
+        document.querySelector('.header').classList.add('active');
         }else{
             document.querySelector('.header').classList.remove('active');
         }
     } 
-}
 
 
 
@@ -49,7 +50,7 @@ var swiper = new Swiper(".home-slider", {
 
 //   for feature section
 var swiper = new Swiper(".feature-slider", {
-    spaceBetween: 30,
+    spaceBetween: 20,
     grabcuror: true,
     loop:true,
     centeredSlides: true,
@@ -70,3 +71,55 @@ var swiper = new Swiper(".feature-slider", {
         },
       },
   });
+
+//   for trainers section
+
+var swiper = new Swiper(".trainer-slider", {
+    spaceBetween: 20,
+    grabcuror: true,
+    loop:true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 9500,
+        disableOnInteraction: false,
+      },
+
+      breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+        },
+      },
+  });
+
+  //   for blogs section
+
+var swiper = new Swiper(".blogs-slider", {
+    spaceBetween: 20,
+    grabCuror: true,
+    loop:true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 8500,
+        disableOnInteraction: false,
+      },
+
+      breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+        },
+      },
+  });
+
+  
